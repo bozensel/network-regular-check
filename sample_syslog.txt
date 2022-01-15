@@ -1,0 +1,12 @@
+# Ports which observed "SFF unsupported type"
+
+46 2022/01/04 21:47:25.889 UTC MINOR: PORT #2033 Base Port 3/1/14
+"SFF unsupported type"
+45 2022/01/04 21:47:25.888 UTC MINOR: PORT #2033 Base Port 3/1/10
+"SFF unsupported type"
+44 2022/01/04 21:47:25.779 UTC MINOR: PORT #2033 Base Port 3/1/20
+"SFF unsupported type"
+43 2022/01/04 21:47:25.778 UTC MINOR: PORT #2033 Base Port 3/1/5
+"SFF unsupported type"
+42 2022/01/04 21:47:25.582 UTC MINOR: PORT #2033 Base Port 3/1/1
+"SFF unsupported type"
