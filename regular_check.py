@@ -31,7 +31,7 @@ except paramiko.AuthenticationException:
 with open("18122021.txt", "r") as f:
     lines = f.readlines()
 
-# -------------------------- Finding out log-id number of log where "SFF unsupported type" observed ----------------------------------# 
+# -------------------------- Finding out log-id number of log and port numbers where "SFF unsupported type" observed----------------------------------# 
     
 indices = []
 
