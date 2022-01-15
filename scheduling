@@ -1,0 +1,7 @@
+# schedule.every().monday.do(regular-check)
+# schedule.every().wednesday.at("13:15").do(regular-check)
+#schedule.every().minute.at(":15").do(regular-check)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
