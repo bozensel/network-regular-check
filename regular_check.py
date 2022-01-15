@@ -31,6 +31,8 @@ except paramiko.AuthenticationException:
 with open("18122021.txt", "r") as f:
     lines = f.readlines()
 
+# -------------------------- trying to find out log-id number of log where "SFF unsupported type" observed ----------------------------------# 
+    
 indices = []
 
 for i in range(len(lines)):
@@ -66,6 +68,37 @@ for line16 in lines3:
 pattern = "Port [0-9]*.[0-9].[0-9]*"
 port_numbers = []
 
+# ------------------------------- the ports where "SFF unsupported type" observed is shut and no shut as an action ---------------------------------#
+
 for log in new_log2:
     port_number = re.findall(pattern, log)
     port_numbers.append(port_number)
+    connection.send('\n/environment no more\n')
+    time.sleep(.5)
+    print(connection.recv(65000).decode())
+    
+    connection.send(f'\nshow {port_numbers3}\n')
+    time.sleep(.5)
+    print(connection.recv(65000).decode())
+    
+    connection.send(f'\n/configure {port_numbers3}\n')
+    time.sleep(.5)
+    print(connection.recv(65000).decode())
+    
+    connection.send(f'\nshutdown\n')
+    print(f"{port_numbers3} is shut")
+    time.sleep(.5)
+    print(connection.recv(65000).decode())
+    
+    connection.send(f'\nshow {port_numbers3}\n')
+    time.sleep(.5)
+    print(connection.recv(65000).decode())
+    connection.send(f'\nno shut\n')
+    
+    print(f"{port_numbers3} is no shut")    
+    time.sleep(.5)
+    print(connection.recv(65000).decode())
+    
+    connection.send(f'\nshow {port_numbers3}\n')
+    time.sleep(.5)
+    print(connection.recv(65000).decode())
