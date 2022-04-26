@@ -1,7 +1,7 @@
 # network-regular-check
-Tracing if "specific log" occurred under a log file and trigger "required commands". 
+Tracing if "specific log" occurred under a log file and trigger "required commands".
 
-"specific log" considered as "SFF unsupported type" in this case. 
+"specific log" considered as "SFF unsupported type" in this case..
 
 "required commands" considered as "configure port x/x/x shutdown" and "configure port x/x/x no shutdown"
 
